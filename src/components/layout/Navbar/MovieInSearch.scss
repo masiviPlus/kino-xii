@@ -1,0 +1,74 @@
+.movie-in-search {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	width: 100%;
+	padding: 8px;
+	border-radius: 8px;
+	background: transparent;
+	color: var(--color-text-primary);
+	text-align: left;
+
+	&:hover {
+		background: var(--color-bg-tertiary);
+        cursor: pointer;
+	}
+}
+
+.movie-in-search__poster,
+.movie-in-search__poster-placeholder {
+	flex: 0 0 48px;
+	width: 48px;
+	height: 72px;
+	border-radius: 4px;
+	object-fit: cover;
+}
+
+.movie-in-search__poster-placeholder {
+	background: var(--color-bg-tertiary);
+}
+
+.movie-in-search__details {
+	display: flex;
+	min-width: 0;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.movie-in-search__title {
+	overflow: hidden;
+	font-weight: 600;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.movie-in-search__price {
+	color: var(--color-text-primary);
+	font-size: 14px;
+}
+
+.movie-in-search__kind {
+  text-transform: capitalize;
+}
+
+.movie-in-search__info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.movie-in-search__content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 20px;
+}
+
+.movie-in-search__price .coming-soon {
+	color: var(--color-warning);
+}
