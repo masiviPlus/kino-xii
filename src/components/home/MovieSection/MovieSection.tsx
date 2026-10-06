@@ -18,10 +18,10 @@ interface MovieSectionProps {
 }
 
 const priceFormatter = new Intl.NumberFormat('ka-GE', {
-	style: 'currency',
-	currency: 'GEL',
 	maximumFractionDigits: 0,
 });
+
+const formatPrice = (amount: number) => `₾${priceFormatter.format(amount)}`;
 
 function formatReleaseDate(releaseDate?: string | null) {
 	if (!releaseDate) return 'Coming soon';
@@ -119,7 +119,7 @@ export default function MovieSection({
 								</p>
 								<p className="movie-section__price">
 									{movie.fromPrice != null
-										? `From ${priceFormatter.format(movie.fromPrice)}`
+										? `From ${formatPrice(movie.fromPrice)}`
 										: 'Now playing'}
 								</p>
 							</article>

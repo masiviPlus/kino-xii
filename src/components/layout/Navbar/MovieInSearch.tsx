@@ -12,8 +12,6 @@ export default function MovieInSearch({
   className,
 }: MovieInSearchProps) {
   const formattedPrice = new Intl.NumberFormat('ka-GE', {
-    style: 'currency',
-    currency: 'GEL',
     maximumFractionDigits: 0,
   }).format(movie.fromPrice);
 
@@ -46,7 +44,7 @@ export default function MovieInSearch({
         {movie.isComingSoon ? (
           <p className="movie-in-search__price label-m"> <span className="coming-soon">Coming Soon</span></p>
         ) : (
-          <p className="movie-in-search__price label-m">from {formattedPrice}</p>
+          <p className="movie-in-search__price label-m">from ₾{formattedPrice}</p>
         )}
       </div>
     </div>
